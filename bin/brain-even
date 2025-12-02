@@ -24,7 +24,7 @@ function brain_even(): void
     $isWinner = true;
     for ($i = 0; $i < 3; $i++) {
         $rand = rand(1 ,100);
-        $rand % 2 === 0 ? $result = "yes" : $result = "no";
+        isEven($rand) ? $result = "yes" : $result = "no";
         line("Question: {$rand}");
         $answer = prompt('Your answer');
         if ($answer === $result) {
@@ -42,6 +42,11 @@ function brain_even(): void
         line("Let's try again, {$name}");
     }
 
+}
+
+function isEven(int $number): bool
+{
+    return $number % 2 === 0;
 }
 
 brain_even();
