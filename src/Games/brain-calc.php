@@ -1,5 +1,6 @@
 <?php
 
+/*
 // Путь, который будет использован при глобальной установке пакета
 $autoloadPath1 = __DIR__ . '/../../../../autoload.php';
 // Путь для локальной работы с проектом
@@ -10,6 +11,7 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
+*/
 
 function brainCalcFunc(): array
 {

@@ -2,8 +2,6 @@
 
 namespace BrainGames\Engine;
 
-require_once(__DIR__ . '/../src/Games/brain-gcd.php');
-
 use function cli\line;
 use function cli\prompt;
 
