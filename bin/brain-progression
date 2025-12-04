@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once(__DIR__ . '/../src/Games/brain-progression.php');
+
+use function \BrainGames\Engine\playGames as playGame;
+
+playGame("What number is missing in the progression?", 'brain_progression_func');
