@@ -13,8 +13,8 @@ if (file_exists($autoloadPath1)) {
 
 function brain_gcd_func(): array
 {
-    $numbA = rand(1,50);
-    $numbB = rand(1,50);
+    $numbA = rand(1, 50);
+    $numbB = rand(1, 50);
     $result = $numbA;
     $question = "{$numbA} {$numbB}";
 
@@ -34,4 +34,3 @@ function brain_gcd_func(): array
     $array['result'] = (string)$result;
     return $array;
 }
-

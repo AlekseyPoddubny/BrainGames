@@ -13,7 +13,7 @@ if (file_exists($autoloadPath1)) {
 
 function brain_even_func(): array
 {
-    $rand = rand(1 ,100);
+    $rand = rand(1, 100);
     $rand % 2 === 0 ? $result = "yes" : $result = "no";
 
     $array = [];
@@ -21,4 +21,3 @@ function brain_even_func(): array
     $array['result'] = (string)$result;
     return $array;
 }
-
