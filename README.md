@@ -20,3 +20,5 @@ https://asciinema.org/connect/f0e6d742-2253-419b-a10f-b0fc848490d2
 https://asciinema.org/connect/f0e6d742-2253-419b-a10f-b0fc848490d2
 ### brain-gcd
 https://asciinema.org/connect/f0e6d742-2253-419b-a10f-b0fc848490d2
+### brain-progression
+https://asciinema.org/connect/f0e6d742-2253-419b-a10f-b0fc848490d2
