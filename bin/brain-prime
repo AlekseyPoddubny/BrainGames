@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once(__DIR__ . '/../src/Games/brain-prime.php');
+
+use function \BrainGames\Engine\playGames as playGame;
+
+playGame("Answer \"yes\" if given number is prime. Otherwise answer \"no\".", 'brain_prime_func');
