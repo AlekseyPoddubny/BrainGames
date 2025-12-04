@@ -33,8 +33,8 @@ function playGames($exercise, $game): void
     }
 
     if ($isWinner) {
-        line("Congratulations, {$name}");
+        line("Congratulations, {$name}!");
     } else {
-        line("Let's try again, {$name}");
+        line("Let's try again, {$name}!");
     }
 }
