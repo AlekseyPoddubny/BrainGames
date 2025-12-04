@@ -13,12 +13,12 @@ if (file_exists($autoloadPath1)) {
 
 function brain_calc_func(): array
 {
-    $numB = mt_rand(1, 15);
-    $numA = $numB + mt_rand(1, 5);
+    $numB = random_int(1, 15);
+    $numA = $numB + random_int(1, 5);
 
     $actions = ['+','-','*'];
 
-    $action = $actions[mt_rand(0, count($actions) - 1)];
+    $action = $actions[random_int(0, count($actions) - 1)];
 
     switch ($action) {
         case '+':
