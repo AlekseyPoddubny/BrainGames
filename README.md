@@ -13,6 +13,32 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=AlekseyPoddubny_BrainGames&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=AlekseyPoddubny_BrainGames)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=AlekseyPoddubny_BrainGames&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=AlekseyPoddubny_BrainGames)
 
+
+## Prerequisites
+
+* Linux, Macos, WSL
+* PHP >=8.4
+* Xdebug
+* Make
+* Git
+
+
+# Setup
+### Setup SSH before clone:
+```bash
+git clone git@github.com:AlekseyPoddubny/BrainGames.git
+cd BrainGames
+make install
+```
+### Use games:
+```bash
+make brain-calc
+make brain-even
+make brain-gcd
+make brain-prime
+make brain-progression
+```
+
 # asciinema
 ### brain-even
 https://asciinema.org/connect/f0e6d742-2253-419b-a10f-b0fc848490d2

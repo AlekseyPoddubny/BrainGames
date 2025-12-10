@@ -1,5 +1,12 @@
 <?php
 
+use function BrainGames\Engine\playGames;
+
+function brainPrime(): void
+{
+    playGames("Answer \"yes\" if given number is prime. Otherwise answer \"no\".", 'brainPrimeFunc');
+}
+
 function brainPrimeFunc(): array
 {
     $number = random_int(1, 50);

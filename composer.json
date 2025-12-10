@@ -1,12 +1,14 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Cli.php",
-            "src/Engine.php"
+            "src/Engine.php",
+            "src/Games/BrainCalc.php",
+            "src/Games/BrainEven.php",
+            "src/Games/BrainGcd.php",
+            "src/Games/BrainPrime.php",
+            "src/Games/BrainProgression.php"
         ]
     },
     "authors": [
