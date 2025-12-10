@@ -2,12 +2,12 @@
 
 use function BrainGames\Engine\playGames;
 
-function brainCalcFunc(): void
+function brainCalc(): void
 {
-    playGames("What is the result of the expression?", "brainCalc");
+    playGames("What is the result of the expression?", "brainCalcFunc");
 }
 
-function brainCalc(): array
+function brainCalcFunc(): array
 {
     $numB = random_int(1, 15);
     $numA = $numB + random_int(1, 5);
