@@ -37,21 +37,13 @@ function calculateCallback(): array
 // Функция для вычисления результата выполнения действий
 function calculate(int $number1, int $number2, string $action): int
 {
-    switch ($action) {
-        case '+':
-            $result = $number1 + $number2;
-            break;
-        case '-':
-            $result = $number1 - $number2;
-            break;
-        case '*':
-            $result = $number1 * $number2;
-            break;
-        default:
-            break;
-    }
+    $variable = [
+        '+' => $number1 + $number2,
+        '-' => $number1 - $number2,
+        '*' => $number1 * $number2
+    ];
 
-    return $result;
+    return $variable[$action];
 }
 
 // Минимальное значение для чисел number1 и number2
