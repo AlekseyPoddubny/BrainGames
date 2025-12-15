@@ -1,24 +1,32 @@
 <?php
 
+namespace BrainGames\Games\BrainPrime;
+
 use function BrainGames\Engine\playGames;
 
-function brainPrime(): void
+function start(): void
 {
-    playGames("Answer \"yes\" if given number is prime. Otherwise answer \"no\".", 'brainPrimeFunc');
+    playGames(
+        'Answer \'yes\' if given number is prime. Otherwise answer \'no\'.',
+        'BrainGames\Games\BrainPrime\primeCallback'
+    );
 }
 
-function brainPrimeFunc(): array
+function primeCallback(): array
 {
-    $number = random_int(1, 50);
-    $question = (string)$number;
-    isPrime($number) ? $result = "yes" : $result = "no";
+    // Генерация случайного числа для задачи
+    $number = random_int(MIN_NUMBER, MAX_NUMBER);
+    // Вычисляем результат действия
+    $result = isPrime($number) ? 'yes' : 'no';
 
+    // Массив для задания и ответа
     $array = [];
-    $array['question'] = $question;
+    $array['question'] = $number;
     $array['result'] = $result;
     return $array;
 }
 
+// Функция для проверки числа на простоту
 function isPrime(int $num): bool
 {
     if ($num <= 1) {
@@ -32,3 +40,8 @@ function isPrime(int $num): bool
     }
     return true;
 }
+
+// Максимальное значение для числа
+const MAX_NUMBER = 50;
+// Минимальное значение для числа
+const MIN_NUMBER = 1;

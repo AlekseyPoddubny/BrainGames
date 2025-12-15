@@ -11,10 +11,8 @@ function playGames(string $exercise, callable $game): void
     $name = prompt('May I have your name?');
     line("Hello, {$name}");
     line("{$exercise}");
-    $isWinner = true;
 
-    for ($i = 0; $i < 3; $i++) {
-        $results = [];
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         $results = $game();
         $question = $results['question'];
         $result = $results['result'];
@@ -25,14 +23,13 @@ function playGames(string $exercise, callable $game): void
             line('Correct!');
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$result}'.");
-            $isWinner = false;
-            break;
+            line("Let's try again, {$name}!");
+            return;
         }
     }
 
-    if ($isWinner) {
-        line("Congratulations, {$name}!");
-    } else {
-        line("Let's try again, {$name}!");
-    }
+    line("Congratulations, {$name}!");
 }
+
+// Количество раундов игры
+const COUNT_ROUNDS = 3;

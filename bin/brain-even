@@ -13,4 +13,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-brainEven();
+use function BrainGames\Games\BrainEven\start;
+
+start();

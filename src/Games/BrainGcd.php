@@ -1,33 +1,50 @@
 <?php
 
+namespace BrainGames\Games\BrainGcd;
+
 use function BrainGames\Engine\playGames;
 
-function brainGcd(): void
+function start(): void
 {
-    playGames("Find the greatest common divisor of given numbers.", 'brainGcdFunc');
+    playGames(
+        'Find the greatest common divisor of given numbers.',
+        'BrainGames\Games\BrainGcd\gcdCallback'
+    );
 }
 
-function brainGcdFunc(): array
+function gcdCallback(): array
 {
-    $numbA = random_int(1, 50);
-    $numbB = random_int(1, 50);
-    $result = getGcd($numbA, $numbB);
-    $question = "{$numbA} {$numbB}";
+    // Генерация первого числа
+    $number1 = random_int(MIN_NUMBER, MAX_NUMBER);
+    // Генерация второго числа
+    $number2 = random_int(MIN_NUMBER, MAX_NUMBER);
 
+    // Условие для задание
+    $question = "{$number1} {$number2}";
+    // Вычисляем результат действия
+    $result = getGcd($number1, $number2);
+
+    // Массив для задания и ответа
     $array = [];
     $array['question'] = $question;
     $array['result'] = (string)$result;
     return $array;
 }
 
-function getGcd(int $a, int $b): int
+// Функция для вычисления НОД
+function getGcd(int $number1, int $number2): int
 {
     while (true) {
-        $tmp = $a;
-        $a = $b;
-        $b = $tmp % $b;
-        if ($b === 0) {
-            return $result = $a;
+        $tmp = $number1;
+        $number1 = $number2;
+        $number2 = $tmp % $number2;
+        if ($number2 === 0) {
+            return $number1;
         }
     }
 }
+
+// Максимальное значение для числа
+const MAX_NUMBER = 50;
+// Минимальное значение для числа
+const MIN_NUMBER = 1;
