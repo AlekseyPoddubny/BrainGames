@@ -7,7 +7,7 @@ use function BrainGames\Engine\playGames;
 function start(): void
 {
     playGames(
-        'Answer \'yes\' if the number is even, otherwise answer \'no\'.',
+        'Answer "yes" if the number is even, otherwise answer "no".',
         'BrainGames\Games\BrainEven\evenCallback'
     );
 }
