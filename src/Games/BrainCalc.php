@@ -35,7 +35,7 @@ function calculateCallback(): array
 }
 
 // Функция для вычисления результата выполнения действий
-function calculate(int $number1, int $number2, string $action)
+function calculate(int $number1, int $number2, string $action): int
 {
     switch ($action) {
         case '+':
