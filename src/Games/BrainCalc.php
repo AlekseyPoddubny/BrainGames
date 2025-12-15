@@ -39,14 +39,19 @@ function calculate(int $number1, int $number2, string $action): int
 {
     switch ($action) {
         case '+':
-            return ($number1 + $number2);
+            $result = $number1 + $number2;
+            break;
         case '-':
-            return ($number1 - $number2);
+            $result = $number1 - $number2;
+            break;
         case '*':
-            return ($number1 * $number2);
+            $result = $number1 * $number2;
+            break;
         default:
             break;
     }
+
+    return $result;
 }
 
 // Минимальное значение для чисел number1 и number2
